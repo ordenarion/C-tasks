@@ -121,8 +121,29 @@ int func9(){
     return 0;
 }
 
+int func10(){
+    int age;
+    scanf("%d",&age);
+    printf("%d years, %d days",age,age*365);
+    return 0;
+}
+
+int func11(){
+    int toes = 10;
+    printf("toes:%d,2*toes:%d,toes*toes:%d",toes,toes*2, toes*toes);
+    return 0;
+}
+
+int func12(){
+    double d = 2.54, cm;
+    printf("enter height in cms: ");
+    scanf("%lf",&cm);
+    printf("height in inches: %lf",cm/d);
+    return 0;
+
+}
 int main()
 {
-    func9();
+    func12();
     return 0;
 }
