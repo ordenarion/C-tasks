@@ -125,9 +125,98 @@ int func7(){
     return 0;
 }
 
+int func8(){
+    int tmp = 0,count = 0,entry,max=0;
+    while((scanf("%d",&entry))&(entry != EOF)){
+        if ((entry-tmp)%2==0){
+            count++;
+            tmp = entry;
+        }
+        else if (count>max) {
+            max = count;
+            count = 0;
+        }
+
+        }
+    if (count>max) {
+        max = count;
+            }
+    printf("Max even sequence length: %d",max);
+    return 0;
+
+}
+
+int func9(){
+    int tmp = 0,count = 0,entry,flag = 0;
+    while((scanf("%d",&entry))&(entry != EOF)){
+        if (flag == 0){
+            flag = 1;
+            if (entry%2!=0) tmp = 1;
+        }
+        if ((entry-tmp)%2==0){
+            count++;
+            tmp = entry;
+        }
+        else {
+            if (tmp%2 == 0) printf("Even sequence length: %d\n",count); else printf("Odd sequence length: %d\n",count);
+            count = 1;
+            tmp = entry;
+        }
+    }
+    if (tmp%2 == 0) printf("Even sequence length: %d\n",count); else printf("Odd sequence length: %d\n",count);
+    return 0;
+
+}
+
+int func10(){
+    int tmp = 0,count = 0,entry,total = 0;
+    while((scanf("%d",&entry))&(entry != EOF)){
+        if(entry-tmp>0){
+            tmp = entry;
+            count++;
+        }
+        else{
+            tmp = entry;
+            total++;
+            printf("[%d] Sequence length: %d\n",total,count);
+            count = 1;
+        }
+    }
+    if (total!=0){
+        total++;
+        printf("[%d] Sequence length: %d\n",total,count);
+        printf("Total: %d\n",total);
+    }
+    else printf("Total: %d\n",total);
+    return 0;
+
+}
+
+int func11(){
+    int tmp = 0,count = 0,entry,max=0,flag = 0;
+    while((scanf("%d",&entry))&(entry != EOF)){
+        if (flag == 0){
+            flag = 1;
+            tmp = entry;
+        }
+        if (entry==tmp) count++;
+        else{
+            tmp = entry;
+            count = 1;
+            if (count>max) max = count;
+        }
+    }
+    if (count>max) {
+        max = count;
+            }
+    printf("Max equal numbers sequence length: %d",max);
+    return 0;
+
+}
+
 int main()
 {
-    func7();
+    func11();
     return 0;
 }
 
