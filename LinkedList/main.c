@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-//asdasdas
+
 typedef struct Node{
     char item[100];
     struct Node *next;
@@ -183,12 +183,12 @@ void show(){
 
 void clear(){
     node *tmp,*next;
-    tmp = head->next;
     if (head==NULL){
         printf("List is empty");
         printf("\n--------------------------------------------------------------\n");
         return;
     }
+    tmp = head->next;
     while (tmp){
         next = tmp->next;
         free(tmp);
