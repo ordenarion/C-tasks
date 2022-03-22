@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-
+//asdasdas
 typedef struct Node{
     char item[100];
     struct Node *next;
